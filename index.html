@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src = "Exception.js"></script>
+    <script src = "Character.js"></script>
+    <script src = "Game.js"></script>
+    <script src = "Tournament.js"></script>
+
+    <script>
+          
+        //var myGame = new Game(goblinFactory(), warriorFactory());
+        
+        //myGame.fight(myGame.getFirst(), myGame.getSecond());
+
+        //console.log(myGame);
+
+        var myTournament = tournamentFactory();
+
+        myTournament.tryAdd(goblinFactory());
+        myTournament.tryAdd(wizardFactory());
+        myTournament.tryAdd(warriorFactory());
+        myTournament.tryAdd(vampireFactory());
+        myTournament.tryAdd(thiefFactory());
+        //console.log(myTournament.getParticipants());
+
+        //console.log(myTournament.getCurrentParticipantsNumber());
+        //myTournament.tryAdd(thiefFactory());
+
+        //myTournament.playRound();
+        //console.log(myTournament.getParticipants());
+
+        //myTournament.getParticipants();
+
+        console.log(myTournament.getCurrentParticipantsNumber());
+
+        myTournament.start();
+        myTournament.getResult();
+
+
+        /*
+        var g = goblinFactory();
+        var w = warriorFactory();
+        g.drinkPotion();
+        var game1 = new Game(g,w);
+
+        game1.fight(g,w);
+        */
+    </script>
+</body>
+</html>
